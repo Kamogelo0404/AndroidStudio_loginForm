@@ -33,7 +33,7 @@ class RegisterActivity : AppCompatActivity() {
         etUsername = findViewById<EditText>(R.id.etRUserName)
         etPassword = findViewById<EditText>(R.id.etRPassword)
 
-        etButton = findViewById<Button>(R.id.btnRegister)
+       etButton = findViewById<Button>(R.id.btnRegister)
         this.findViewById<TextView>(R.id.tvLoginLink).setOnClickListener{
             startActivity(Intent(this, LoginActivity::class.java))
         }

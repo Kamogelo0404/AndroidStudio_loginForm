@@ -2,11 +2,24 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
     android:padding="20dp"
-    android:background="@color/pink">
+    android:background="@color/colorAccent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/etRUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/user_pic" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -26,7 +39,7 @@
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="USER REGISTRATION"
+        android:text="USER REGISTER"
         android:textColor="#000"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -35,19 +48,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
-
     <EditText
         android:id="@+id/etRUserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="224dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="text"
         android:textSize="20sp"
-        android:textColor="@color/dark_pink"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
 
@@ -55,24 +65,21 @@
         android:id="@+id/etRPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="Password"
+
         android:inputType="textPassword"
         android:textSize="20sp"
-        android:textColor="@color/dark_pink"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etRUserName" />
-
-
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/dark_pink"
+        android:background="@android:color/holo_orange_dark"
         android:text="REGISTER"
         android:textColor="@android:color/background_dark"
         android:textSize="16sp"
@@ -85,13 +92,16 @@
         android:id="@+id/tvLoginLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="52dp"
         android:gravity="center"
-        android:text="Already a user?\nClick here to login"
+        android:text="Not a user?\nClick here to login"
         android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegister"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.561"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etRPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etRPassword"
+        app:layout_constraintVertical_bias="0.269" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
